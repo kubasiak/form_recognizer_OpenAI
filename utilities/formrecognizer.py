@@ -1,0 +1,58 @@
+from azure.core.credentials import AzureKeyCredential
+from azure.ai.formrecognizer import DocumentAnalysisClient
+import os
+
+PAGES_PER_EMBEDDINGS = int(os.getenv('PAGES_PER_EMBEDDINGS', 2))
+SECTION_TO_EXCLUDE = ['title', 'sectionHeading', 'footnote', 'pageHeader', 'pageFooter', 'pageNumber']
+
+def analyze_read(formUrl,verbose =False ):
+
+    
+    document_analysis_client = DocumentAnalysisClient(
+        endpoint=os.environ['FORM_RECOGNIZER_ENDPOINT'], credential=AzureKeyCredential(os.environ['FORM_RECOGNIZER_KEY'])
+    )
+    
+    poller = document_analysis_client.begin_analyze_document_from_url(
+            "prebuilt-layout", formUrl)
+    layout = poller.result()
+
+    if verbose:
+        print('Extracted dictionary with keys: ', end='')
+        print(layout.to_dict().keys())
+        print('EXTRACTING:')
+
+    results = []
+    page_result = ''
+    if verbose:print('paragraphs')
+    for p in layout.paragraphs:
+        if verbose:print('.',end='')
+        page_number = p.bounding_regions[0].page_number
+        output_file_id = int((page_number - 1 ) / PAGES_PER_EMBEDDINGS)
+
+        if len(results) < output_file_id + 1:
+            results.append('')
+
+        if p.role not in SECTION_TO_EXCLUDE:
+            results[output_file_id] += f"{p.content}\n"
+    if verbose:print('\ntables')
+    for t in layout.tables:
+        if verbose:print('.',end='')
+        page_number = t.bounding_regions[0].page_number
+        output_file_id = int((page_number - 1 ) / PAGES_PER_EMBEDDINGS)
+        
+        if len(results) < output_file_id + 1:
+            results.append('')
+        previous_cell_row=0
+        rowcontent='| '
+        tablecontent = ''
+        for c in t.cells:
+            if c.row_index == previous_cell_row:
+                rowcontent +=  c.content + " | "
+            else:
+                tablecontent += rowcontent + "\n"
+                rowcontent='|'
+                rowcontent += c.content + " | "
+                previous_cell_row += 1
+        results[output_file_id] += f"{tablecontent}|"
+    if verbose:print()
+    return results

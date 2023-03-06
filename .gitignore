@@ -3,3 +3,5 @@
 *.xlsx
 *.ipynb
 data/**
+test.py
+materials/**
