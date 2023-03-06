@@ -26,7 +26,7 @@ os.makedirs('data', mode = 0o777, exist_ok = True)
 
 def get_context(formUrl,file_name):
     file_name_root = os.path.splitext(file_name)[0] 
-    context_file_name = os.path.join('data','context_'+file_name_root+'txt') 
+    context_file_name = os.path.join('data','context_'+file_name_root+'.txt') 
     colorprint('ANALYZING FILE : '+ file_name)
 
     try: 
@@ -115,7 +115,7 @@ for file in files_data:
         question_text = openAIresponse[0]
         response_text = openAIresponse[1]
 
-        response_file_name =os.path.join('data','response_'+file_name_root+'txt')
+        response_file_name =os.path.join('data','response_'+file_name_root+'.txt')
         with open(response_file_name, 'w') as f2:
             f2.write(str(response_text))  
         df[file_name_root]=response_text
