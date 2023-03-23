@@ -74,7 +74,7 @@ for fd in files_data:
         print(fd['filename'])
 
 file_name = files_data[1]['filename']
-for file in files_data[2:3]:
+for file in files_data[0:4]:
     file_name=file['filename']
     
     file_name_root = os.path.splitext(file_name)[0] 
@@ -84,10 +84,10 @@ for file in files_data[2:3]:
     try: 
         with open(context_file_name) as f:
             used_context =f.read()
-            colorprint(f"Found file {context_file_name} with extracted content for context. \nReading file, NOT sending document to Form Recognizer.",'87')
+            colorprint(f"Found file {context_file_name} with extracted content for context.      ------>     Reading file, NOT sending document to Form Recognizer.",'87')
         with open(context2_file_name) as f:
             secondary_context =f.read()
-            colorprint(f"Found file {context_file_name} with extracted content for context. \nReading file, NOT sending document to Form Recognizer.",'87')
+            colorprint(f"Found file {context2_file_name} with extracted content for context.     ------>     Reading file, NOT sending document to Form Recognizer.",'87')
 
     except:
         file_sas = generate_blob_sas(account_name, container_name, file_name, account_key= account_key, permission='r', expiry=datetime.utcnow() + timedelta(hours=1))
@@ -103,9 +103,6 @@ for file in files_data[2:3]:
             f.write(secondary_context)  # text has to be string not a list
             colorprint(f"Writing context file {context2_file_name}",'44')
 
-    colorprint(f"\nUNUSED CONTEXT: text, table text, handwriting.")
-    colorprint('Used context:','77')
-    print(used_context)
     #print(context2)
     try:
         openAIresponse = get_openAI_response(context=used_context,secondary_context=str(secondary_context),question=question,model=model,temperature =0.0, tokens_response=15,restart_sequence='\n\n')
@@ -119,4 +116,4 @@ for file in files_data[2:3]:
     except:
         colorprint("File couldn't be processed",'9')
 
-#print(df)
+print(df)

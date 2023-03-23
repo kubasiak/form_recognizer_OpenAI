@@ -1,0 +1,106 @@
+
+RPrIk H
+Guy's and St Thomas' NHS
+NHS Foundation Trust
+Registration and prescription for Adalimumab (Amgevita®) therapy for adults with Ankylosing
+Spondylitis
+Patient Name:
+Steve Jobs
+Hospital No:
+Address:
+Somewhere really nice
+London
+L1 2AB
+Date of Birth:
+21/06/77
+Gender:
+Male
+Telephone:
+07123456789
+Pr's main number
+Pre-Treatment Investigations
+Chest X-ray reviewed: Yes
+T - Spot
+3. Negative
+Date:
+Allergy: NK
+CONSULTANT:
+Garrood, Toby
+CONSULTANT CODE: GART
+SPECIALTY:
+41081-Rheumatology
+WARD/ CLINIC;
+Rheumatology Department - Guys
+GP:
+D.A. KENNY
+ADDRESS:
+WELL HALL SURGERY
+180 WELL HALL ROAD
+ELTHAM
+LONDON, SE9 6SR
+Past Medical History
+Tuberculosis: No
+SLE
+No
+MS:
+No
+Malignancy:
+No
+CCF
+No
+Recurrent infections: No
+NICE Criteria
+Patient has severe active ankylosing spondylitis as defined in the New York criteria for diagnosis of ankylosing spondylitis:
+Yes
+Conventional treatment with 2 or more NSAID's taken sequentially at maximum tolerated or recommended dosage for 4 weeks has
+failed to control symptoms:
+Yes
+Sustained active spinal disease demonstrated by a Bath Ankylosing Spondylitis Disease Activity (BASDAI) score of at least 4cm on the Yes
+spinal visual analogue scale (VAS range 0-10) on two occasions at least 12 weeks apart without any change of treatment:
+Previous biological therapy (if applicable) and reasons for stopping:
+Current Meds: ETORCOXIB
+Anti-TNF treatment as part of a clinical trial:
+IDACIO - INJECTION SITE REACTION
+Dose: Adalimumab (Amgevita®) 40mg subcutaneous injection every 2 weeks
+Device Used:
+Pre-Filled Pen
+Frequency of delivery Of weeks
+24
+Number of Weeks Supply: 10 weeks
+Needle Phobic?
+No
+Assessment Details
+BASDAI Score:
+3.1
+Patient given drug information leaflet: Yes
+Spinal Pain VAS Score:
+4
+BASDAI Score 12 weeks:
+Spinal Pain VAS Score 12 weeks:
+Homecare Nurse Required: No
+24/10/2022
+Dr's Name:
+Subesinghe, Sujith (Doctor)
+Date: 27 Oct 2022 16:09
+Dr's Bleep/ext number 54445
+I have discussed this service with patient and they have given consent for registration with the homecare company.
+Doctor's Signature:
+PPUBOOLLES
+Pharmacist's Name:
+Pharmacist's Signature:
+Specialist Nurse's Name:
+Specialist Nurse's Signature:
+Date: 22/10/22
+Date:
+1/11/22
+Date:
+Patient trained on injection device? Y / N/NA
+Information pack sent to patient ?:
+Y /N
+Pharmacy Order no:
+HAH 1101054
+Guy's & St Thomas' NHS Foundation Trust : 0207 188 7188
+Guy's Hospital Great Maze Pond, London, SE1 9RT
+Medicines Helpline : 0207 188 8748 (Guy's), 0207 188 5008 (St Thomas')
+Received in Pharmacy 2 0 AT 29
+['| CONSULTANT: Garrood, Toby CONSULTANT CODE: GART SPECIALTY: 41081-Rheumatology WARD/ CLINIC; Rheumatology Department - Guys | \n|GP: D.A. KENNY ADDRESS: WELL HALL SURGERY 180 WELL HALL ROAD ELTHAM LONDON, SE9 6SR | \n|Past Medical History |  | \n|Tuberculosis: No | SLE No | \n|MS: No | Malignancy: No | \n|']

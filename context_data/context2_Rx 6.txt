@@ -1,0 +1,98 @@
+
+Sciensus
+Private and Confidential :
+Amgevita® (adalimumab) Homecare Prescription
+*** NHS Service ***
+27/10
+Hospital Name
+Western General Hospital
+Prescription type
+Hospital Address
+&
+Post Code
+Crewe Road South, Edinburgh
+EH4 2XU
+New patient
+Renewal
+Dose change
+Therapy Switch
+Patient Name (including title)
+Mrs Ann Smith
+Address &
+Post Code
+123 Somewhere Cold
+Edinburgh
+Date of Birth: 27/07/1967
+Blueteq Ref: n/a
+Hospital Number:
+NHS / CHI Number: 2707671223
+Indication:
+Rheumatoid Arthritis
+] Ankylosing Spondylitis.
+E] Psoriatic Arthritis
+Uveitis
+] Hidradenitis Suppurativa
+Crohn's Disease
+[X]Other:
+Inflammatory Arthritis
+Purchase Order Number: R221028226
+. Weight (Kg):
+Psoriasis
+Ulcerative Colitis
+Known Allergies / Sensitivities:
+Induction Dose (complete if applicable for this prescription)
+Drug
+Presentation
+Dose
+Week / Day
+Route
+Amgevita®
+/adalimumab)
+20mg pre-filled Syringe
+40mg pre-filled syringe
+40mg pre-filled-pen
+n/a mg
+n/a
+S.C
+n/a mg
+n/a
+n/a mg
+n/a
+Maintenance Dose - complete for all patients
+Drug
+Presentation
+Dose
+Frequency
+Route
+Amgevita®
+(adalimumab)
+] 20mg pre-filled syringe
+40mg pre-filled syringe
+X] 40mg pre-filled pen
+40 mg
+Fortnightly
+S.C'
+Please tick - I am prescribing this treatment off-label
+] Yes
+No
+Please deliver every 8 weeks, for a total duration of 24 weeks
+Signature
+er
+Date
+26/10/22
+Name of Prescriber (Block Capitals)
+AN 8MAI
+Qualification /OME GOPAL 2210438
+Telephone:
+Clinical Screening - If applicable
+Pharmacist Signature
+Date
+Name of Pharmacist (Block Capitals)
+Please forward signed original copy to: Pharmacy Department, Sciensus, 107 Station Street, Burton-upon-
+Trent, Staffordshire, DE14 1SZ Tel No: 01283 501390
+['| Hospital Name | Western General Hospital | Prescription type | \n|']
+['| Patient Name (including title) | Mrs Ann Smith | \n|']
+['| Date of Birth: 27/07/1967 | Blueteq Ref: n/a | \n|']
+['| Drug | Presentation | Dose | Week / Day | Route | \n|Amgevita® /adalimumab) | 20mg pre-filled Syringe 40mg pre-filled syringe 40mg pre-filled-pen\n:unselected: :unselected: :unselected: | n/a mg | n/a | S.C | \n|n/a mg | n/a | \n|']
+['| Drug | Presentation | Dose | Frequency | Route | \n|']
+['| Signature | Date | Name of Prescriber (Block Capitals) | \n|er | 26/10/22 | AN 8MAI | \n|Qualification /OME GOPAL | 2210438 | Telephone: | \n|Clinical Screening - If applicable | \n|Pharmacist Signature | Date | Name of Pharmacist (Block Capitals) | \n|']
