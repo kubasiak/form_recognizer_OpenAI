@@ -1,26 +1,26 @@
-Extract the following information from the text, give just one information. remove all initial newlines, if not present mention not in text:
-- Patient Name:
-- Patient Address:
-- Patient postcode:
-- DOB:
-- NHS Number:
-- Hospital Number:
-- Service (Gastroenterology, Rheumatology, Cardiology, Neurology, Endocrinology, Oncology, Not present):
-- Hospital Name:
-- Hospital Address:
-- Hospital Postcode:
-- Purchase Order Number:
-- Prescription Start Date/Prescriber signature date:
-- Prescription Type (New patient or Renewal):
-- Prescribed Drugs:
-- Form (pen, syringe, tablet):
-- Strength/dosage in mg or ml:
-- Prescribed dose:
-- Frequency of drug:
-- Route:
-- Induction / loading dose (or is it present):
-- Off Label:
-- delivery frequency (weeks/days, convert weeks into days):
-- Total duration (weeks/days, shouldn't be shorter than delivery frequency, convert weeks into days):
-- Prescriber signature:
-- Clinically screen - second signature:
+Extract the following information from the text, give just one information. if you dont know or unsure, say unknown:
+ Patient Name:
+ Patient Address:
+ Patient postcode:
+ DOB:
+ NHS Number:
+ Hospital Number:
+ Service (Gastroenterology, Rheumatology, Cardiology, Neurology, Endocrinology, Oncology, Not present):
+ Hospital Name:
+ Hospital Address:
+ Hospital Postcode:
+ Purchase Order Number:
+ Prescription Start Date/Prescriber signature date:
+ Prescription Type (New patient or Renewal or Continuing or Therapy change or Frequency Change):
+ Prescribed Drug Name:
+ Form (pen, syringe, tablet):
+ Strength/dosage in mg or ml:
+ Prescribed dose:
+ Frequency of drug:
+ Route:
+ Induction / loading dose (or is it present):
+ Off Label:
+ delivery frequency (weeks/days, convert weeks into days):
+ Total duration (weeks/days, shouldn't be shorter than delivery frequency, convert weeks into days):
+ Prescriber signature:
+ Clinically screen - second signature:

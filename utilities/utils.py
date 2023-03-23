@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from openai.embeddings_utils import get_embedding, cosine_similarity
 import openai
-import os, io, zipfile
+import os, io, zipfile, time
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 from transformers import GPT2Tokenizer
 #from utilities.redisembeddings import execute_query, get_documents, set_document
@@ -170,3 +170,70 @@ def convert_file_and_add_embeddings(fullpath, filename, enable_translation=False
     upsert_blob_metadata(filename, {"converted": "true"})
     for k, t in enumerate(text):
         add_embeddings(t, f"{filename}_chunk_{k}", os.getenv('OPENAI_EMBEDDINGS_ENGINE_DOC', 'text-embedding-ada-002'))
+
+def get_openAI_response(context='lores ipsum',secondary_context='',question=['tl;dr'],model='text-davinci-003',temperature=0,tokens_response=15,restart_sequence=15):
+    question_text=[]
+    response_text=[]
+    instruction = question[0]
+    colorprint(instruction,'20')
+    for q in question[1:]:
+        prompt = f"{context}{restart_sequence}{instruction}{''+q}"
+        try:
+            response = openai.Completion.create(
+                engine=model,
+                prompt=prompt,
+                temperature=temperature,
+                max_tokens=tokens_response,
+                top_p=0.5,
+                frequency_penalty=0,
+                presence_penalty=0,
+                stop=None
+            )
+        except:
+            time.sleep(7)
+            response = openai.Completion.create(
+                engine=model,
+                prompt=prompt,
+                temperature=temperature,
+                max_tokens=tokens_response,
+                top_p=0.5,
+                frequency_penalty=0,
+                presence_penalty=0,
+                stop=None
+            )
+        r=response['choices'][0]['text'].strip(' \n\:?')
+        r2=''
+        
+        
+        if r=='Unknown':
+            prompt = f"{secondary_context}{restart_sequence}{instruction}{''+q}"
+            try:
+                response = openai.Completion.create(
+                    engine=model,
+                    prompt=prompt,
+                    temperature=temperature,
+                    max_tokens=tokens_response,
+                    top_p=0.5,
+                    frequency_penalty=0,
+                    presence_penalty=0,
+                    stop=None
+                )
+            except:
+                time.sleep(7)
+                response = openai.Completion.create(
+                    engine=model,
+                    prompt=prompt,
+                    temperature=temperature,
+                    max_tokens=tokens_response,
+                    top_p=0.5,
+                    frequency_penalty=0,
+                    presence_penalty=0,
+                    stop=None
+                )
+            r2=response['choices'][0]['text'].strip(' \n\:?')
+        colorprint(q, '33', end=' ')
+        colorprint(r,'22',end=' ')
+        colorprint(r2,'11')
+        response_text.append(r)
+        question_text.append(q)
+    return([question_text,response_text])

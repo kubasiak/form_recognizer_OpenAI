@@ -44,7 +44,7 @@ def get_context(formUrl,file_name):
         with open(context_file_name, 'w') as f:
             f.write(context)  # text has to be string not a list
         colorprint(f"Writing context file {context_file_name}",'44')
-    colorprint("QUERING OPENAI USING EXTRACTED TEXT AS CONTEXT:")
+    
     return(context)
 
 def get_openAI_response(context='lores ipsum',question=['tl;dr'],model='text-davinci-003',temperature=1,tokens_response=15,restart_sequence=15):
@@ -111,6 +111,7 @@ for file in files_data:
 
 
         context = get_context(formUrl,file_name)
+        colorprint("QUERING OPENAI USING EXTRACTED TEXT AS CONTEXT:")
         openAIresponse = get_openAI_response(context,question,model=model,temperature =0.0, tokens_response=15,restart_sequence='\n\n')
         question_text = openAIresponse[0]
         response_text = openAIresponse[1]

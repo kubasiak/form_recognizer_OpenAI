@@ -1,0 +1,27 @@
+
+Patient Name: Scott F
+0804976058 08/04/1997
+Hospital : University Hospital Monklands
+Address: Monkscourt Avenue, Airdrie
+Patient Address: 93 E
+Blobby
+Post Code: G67 2LH
+Date of Birth: 08/04/1
+123 New Road
+Patient CHI Number: Lanarkshire
+Post code: ML6 OJS
+Indication: CD
+Purchase Order Number: R220624414JE
+Allergies: NKDA
+Continuing X
+40mg Pen :selected:
+Prescriber's Signature PRO
+Prescriber's Name (Print): De-Clarke | BECCA PEN (PIP)
+Registration Number: 2218917
+Date: 22/6/22
+Print Name: GPhC 2065962
+Date: 24/6/22
+Approved: October 2020
+Review: July 2022
+['selected', '[129.0, 195.0], [138.0, 195.0], [138.0, 203.0], [129.0, 203.0]', 0.2]
+['selected', '[210.0, 387.0], [220.0, 387.0], [220.0, 395.0], [210.0, 395.0]', 0.742]
