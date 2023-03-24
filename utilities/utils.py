@@ -177,7 +177,6 @@ def get_openAI_response(context='lores ipsum',secondary_context='',question=['tl
     instruction = question[0]
     colorprint(instruction,'20')
     for q in question[1:]:
-        print('')
         prompt = f"{context}{restart_sequence}{instruction}{''+q}"
         try:
             response = openai.Completion.create(
@@ -204,6 +203,7 @@ def get_openAI_response(context='lores ipsum',secondary_context='',question=['tl
             )
         r=response['choices'][0]['text'].strip(' \n\:?')
         r2=''
+
         colorprint(q, '33', end=' ')
         colorprint(r,'22',end=' ')  
         
@@ -236,4 +236,6 @@ def get_openAI_response(context='lores ipsum',secondary_context='',question=['tl
             colorprint(r,'11',end='')
         response_text.append(r)
         question_text.append(q)
+        print('')
+    print('')
     return([question_text,response_text])

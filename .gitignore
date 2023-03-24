@@ -3,6 +3,7 @@
 *.xlsx
 *.ipynb
 data/**
+context_data/**
 test.py
 materials/**
 __pycache__

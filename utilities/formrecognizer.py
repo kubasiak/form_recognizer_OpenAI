@@ -99,6 +99,7 @@ def format_polygon(polygon):
 
 
 def analyze_general_documents(docUrl,verbose=False):
+    print(docUrl)
     kv_results=[]
     kv_dict={}
     document_analysis_client = DocumentAnalysisClient(
@@ -214,8 +215,8 @@ def analyze_general_documents(docUrl,verbose=False):
         '''
         table_text.append(format_table(table))
     print('-----------------------------------------------------------------------------')
-    with open('context_data/FR_general.txt', 'w') as f:
-            f.write(str(result) ) # text has to be string not a list
+    #with open('context_data/FR_general.txt', 'w') as f:
+    #        f.write(str(result) ) # text has to be string not a list
             
     return([kv_results,raw_text_lines,raw_text_words,table_text,checkbox,kv_dict])
    

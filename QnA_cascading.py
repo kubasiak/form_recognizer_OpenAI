@@ -61,10 +61,8 @@ def get_context_general(formUrl,file_name):
 with open('question.txt') as f:
     question = f.read().splitlines()
 f.close()
-colorprint('THE QUESTION: ' + str(question), '44')
 colorprint('INITIALIZING OPENAI CONNECTION')
 initialize()
-
 df = pd.DataFrame(question[1:],columns =['Q'])
 
 colorprint('DISCOVERING ALL FILES IN THE BLOB STORAGE:')
@@ -73,10 +71,10 @@ files_data = list(map(lambda x: {'filename': x['filename']}, files_data))
 for fd in files_data:
         print(fd['filename'])
 
-file_name = files_data[1]['filename']
-for file in files_data[0:4]:
+
+for file in files_data:
     file_name=file['filename']
-    
+    colorprint(f"EXTRACTING TEXT CONTENT FILE: {file_name}")
     file_name_root = os.path.splitext(file_name)[0] 
     context_file_name = os.path.join('context_data','context_'+file_name_root+'.txt') 
     context2_file_name = os.path.join('context_data','context2_'+file_name_root+'.txt') 
@@ -102,8 +100,7 @@ for file in files_data[0:4]:
         with open(context2_file_name, 'w') as f:
             f.write(secondary_context)  # text has to be string not a list
             colorprint(f"Writing context file {context2_file_name}",'44')
-
-    #print(context2)
+    colorprint('OPENAI QUERY')
     try:
         openAIresponse = get_openAI_response(context=used_context,secondary_context=str(secondary_context),question=question,model=model,temperature =0.0, tokens_response=15,restart_sequence='\n\n')
         question_text = openAIresponse[0]
@@ -115,5 +112,6 @@ for file in files_data[0:4]:
         df[file_name_root]=response_text
     except:
         colorprint("File couldn't be processed",'9')
-
+print('--------------------')
 print(df)
+df.to_csv(f"data/result.csv")
